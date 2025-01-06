@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Urban Agriculture Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3A9D70;
+            padding: 10px 20px;
+        }
+
+        .top-nav .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1em;
+        }
+
+        .top-nav .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+            background-color: #2E8B57;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #f1f1f1;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #3A9D70;
+            position: fixed;
+            height: 100%;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #2E8B57;
+        }
+
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* Carousel Styling */
+        .carousel {
+            position: relative;
+            max-width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel-inner {
+            display: flex;
+            width: 100%;
+            transform: translateX(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-inner img {
+            flex: 0 0 100%;
+            height: 400px;
+            object-fit: contain;
+            background-color: #fff;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            padding: 10px 15px;
+            z-index: 1000;
+        }
+
+        .carousel-control.left {
+            left: 10px;
+        }
+
+        .carousel-control.right {
+            right: 10px;
+        }
+
+        .welcome {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #3A9D70;
+        }
+
+        /* SDG Info Section */
+        .sdg-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sdg-info h2 {
+            color: #F39C12;
+            text-align: center;
+        }
+
+        .sdg-info p {
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#product">Product</a>
+            <a href="#video">Video</a>
+            <a href="#contact">Contact</a>
+            <a href="mailto:info@example.com">Email</a>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Sustainable Urban Agriculture Platform</h1>
+        <p>Your resource for urban farming knowledge and community support.</p>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#library">Knowledge Library</a>
+        <a href="#calculator">Environmental Impact Calculator</a>
+        <a href="#map">Community Project Map</a>
+        <a href="#self-sufficiency">Self-Sufficiency Suggestions</a>
+        <a href="#news">News and Events</a>
+        <a href="#forum">Community Forum</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- Carousel -->
+        <div class="carousel">
+            <div class="carousel-inner">
+                <img src="Thumbnail-SDG-13.png" alt="SDG 13 Climate Action">
+                <img src="Thumbnail-SDG-12.png" alt="SDG 12 Responsible Consumption">
+                <img src="article-61669cb71d061.jpg" alt="SDG 11 Sustainable Cities">
+                <img src="Urban-Ag-List.jpg" alt="Urban Agriculture">
+                <img src="urban-farming-at-rooftops.webp" alt="Urban Rooftop Farming">
+                <img src="gronsaker-odling-urban-farming.jpg" alt="Urban Farming Setup">
+            </div>
+            <button class="carousel-control left" onclick="prevSlide()">&#8249;</button>
+            <button class="carousel-control right" onclick="nextSlide()">&#8250;</button>
+        </div>
+
+        <!-- SDG Information Section -->
+        <div class="sdg-info">
+            <h2>SDG 11: Sustainable Cities and Communities</h2>
+            <p>
+                SDG 11 aims to make cities inclusive, safe, resilient, and sustainable.
+                This includes ensuring access to adequate housing, improving public transportation,
+                reducing urban pollution, and creating green spaces for a better quality of life in cities.
+            </p>
+        </div>
+
+        <div class="sdg-info">
+            <h2>SDG 12: Responsible Consumption and Production</h2>
+            <p>
+                SDG 12 aims to ensure sustainable consumption and production patterns.
+                This involves reducing food waste, promoting sustainable business practices,
+                and encouraging individuals to make environmentally conscious choices.
+            </p>
+        </div>
+
+        <div class="sdg-info">
+            <h2>SDG 13: Climate Action</h2>
+            <p>
+                SDG 13 calls for urgent action to combat climate change and its impacts.
+                This includes reducing greenhouse gas emissions, promoting renewable energy,
+                and supporting climate adaptation strategies to build resilience.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const carouselInner = document.querySelector('.carousel-inner');
+        const images = document.querySelectorAll('.carousel-inner img');
+        let currentIndex = 0;
+
+        function prevSlide() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            carouselInner.style.transform = translateX(-${currentIndex * 100}%);
+        }
+    </script>
+
+</body>
+</html>    ??
